@@ -8,6 +8,7 @@ def create_app():
 	# Create the Flask application object
 	app = Flask(__name__)
 	app.config['SECRET_KEY'] = 'js-blog-secret-key'
+	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///js-blog-db.sqlite'
 
 	db.init_app(app)
@@ -20,5 +21,7 @@ def create_app():
 	app.register_blueprint(homepage)
 	app.register_blueprint(auth, url_prefix="/auth")
 	
+	from .auth.models import User
+	db.create_all(app=app)
 	# Return the application object
 	return app
