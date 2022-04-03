@@ -130,3 +130,4 @@ dmypy.json
 
 # Python VENV
 /js-blog/*
+.vercel

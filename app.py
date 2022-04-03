@@ -1,4 +1,4 @@
-from create_app import create_app
+from . import create_app
 
 # Create app from create_app function
 app = create_app()
