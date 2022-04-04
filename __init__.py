@@ -22,10 +22,12 @@ def create_app():
 	# Import the views module
 	from .homepage.views import homepage
 	from .auth.views import auth
+	from .quest.views import quest
 	
 	# Register the blueprint with the application
 	app.register_blueprint(homepage)
 	app.register_blueprint(auth, url_prefix="/auth")
+	app.register_blueprint(quest, url_prefix="/quest")
 	
 	from .auth.models.User import User
 	db.create_all(app=app)
