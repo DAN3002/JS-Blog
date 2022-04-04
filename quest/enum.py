@@ -27,4 +27,8 @@ QUEST_INFO = {
 }
 
 def get_quest_info(quest_name):
+	# if not exist, return None
+	if quest_name not in QUEST_INFO:
+		return None
+
 	return QUEST_INFO[quest_name]
