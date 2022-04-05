@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h1 class="title">
-		This is History
-	</h1>
+	<div class="column is-4 is-offset-4">
+		<h1 class="title">
+			This is History
+		</h1>
+		{% include 'quest/submit_quest.html' %}
+	</div>
 {% endblock %}

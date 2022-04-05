@@ -7,7 +7,7 @@ db = SQLAlchemy()
 
 def create_app():
 	# Create the Flask application object
-	app = Flask(__name__)
+	app = Flask(__name__, static_url_path='/static', static_folder='static')
 	app.config['SECRET_KEY'] = 'js-blog-secret-key'
 	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///js-blog-db.sqlite'
