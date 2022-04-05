@@ -37,3 +37,10 @@ def get_quest_info(quest_name):
 		return None
 
 	return QUEST_INFO[quest_name]
+
+def get_quest_by_number(quest_id):
+	for quest_name, quest_info in QUEST_INFO.items():
+		if quest_info['quest_id'] == quest_id:
+			return quest_name
+
+	return None
