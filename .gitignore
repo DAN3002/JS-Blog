@@ -131,3 +131,6 @@ dmypy.json
 # Python VENV
 /js-blog/*
 .vercel
+
+# Database
+./js-blog-db.sqlite
