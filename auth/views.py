@@ -1,7 +1,9 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, current_user
 from .models.User import User
+from flask import jsonify
+
 
 from .. import db
 
@@ -59,3 +61,11 @@ def login_post():
 	# if the above check passes, then we know the user has the right credentials
 	login_user(user, remember=remember)
 	return redirect(url_for('homepage.profile'))
+
+@auth.route('/user')
+@login_required
+def user():
+    return jsonify({
+		'name': current_user.name,
+		'id': current_user.id,
+	})

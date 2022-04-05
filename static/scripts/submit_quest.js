@@ -3,7 +3,7 @@ const getUrlParameter = (key) => {
 	return urlParams.get(key);
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", async function (event) {
 	const submitQuestBtn = document.getElementById('submit-quest-btn');
 	const questPasswordInput = document.getElementById('quest-password-input');
 
@@ -32,9 +32,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			type: type
 		}
 
+		const user = await getUser()
+
 		fetch("/quest/submit_quest", {
 			method: "POST",
-			body: JSON.stringify(data)
+			body: JSON.stringify(data),
+			user_id: user.id
 		}).then(async (res) => {
 			const data = await res.json();
 
