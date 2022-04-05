@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from flask_login import login_required, current_user
+from flask_login import login_required
 from flask import jsonify 
 from .models.UserSubmit import UserSubmitController
 
@@ -26,7 +26,6 @@ def index():
 	return render_template(f'/quest/{ type }.html')
 
 @quest.route('/submit_quest', methods = ['POST'])
-@login_required
 def submit_quest():
 	# Get password, type from request body
 	request_data = request.data
@@ -35,6 +34,7 @@ def submit_quest():
 
 	password = request_data['quest_password']
 	type = request_data['type']
+	user_id = request_data['user_id']
 
 	# Get and check quest info
 	quest_info = get_quest_info(type)
@@ -44,7 +44,7 @@ def submit_quest():
 		return jsonify({ 'status': 'not success' })
 
 	# add new Submit
-	# UserSubmitController.add_new_submit(current_user, quest_info['quest_id'])
+	UserSubmitController.add_new_submit(user_id, quest_info['quest_id'])
 	next_quest = quest_info['next_quest']
 
 	return jsonify({

@@ -3,11 +3,11 @@ const getUrlParameter = (key) => {
 	return urlParams.get(key);
 }
 
-document.addEventListener("DOMContentLoaded", async function (event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 	const submitQuestBtn = document.getElementById('submit-quest-btn');
 	const questPasswordInput = document.getElementById('quest-password-input');
 
-	submitQuestBtn.addEventListener('click', function (event) {
+	submitQuestBtn.addEventListener('click', async function (event) {
 		event.preventDefault();
 
 		const questPassword = questPasswordInput.value;
@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", async function (event) {
 		// get type in url parram
 		const type = getUrlParameter('type');
 
+		const user = await getUser()
 		const data = {
 			quest_password: questPassword,
-			type: type
+			type: type,
+			user_id: user.id
 		}
 
-		const user = await getUser()
 
 		fetch("/quest/submit_quest", {
 			method: "POST",
 			body: JSON.stringify(data),
-			user_id: user.id
 		}).then(async (res) => {
 			const data = await res.json();
 

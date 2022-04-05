@@ -16,7 +16,7 @@ class UserSubmitController():
 			.first()
 
 	@staticmethod
-	def add_new_submit(user, level):
-		new_submit = UserSubmit(user_id=user.id, level=level, date=datetime.now())
+	def add_new_submit(user_id, level):
+		new_submit = UserSubmit(user_id=user_id, level=level, date=datetime.now())
 		db.session.add(new_submit)
 		db.session.commit()
