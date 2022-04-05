@@ -30,6 +30,8 @@ def create_app():
 	app.register_blueprint(quest, url_prefix="/quest")
 	
 	from .auth.models.User import User
+	from .quest.models.UserSubmit import UserSubmit
+
 	db.create_all(app=app)
 
 	@login_manager.user_loader

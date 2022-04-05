@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from flask import jsonify 
+from .models.UserSubmit import UserSubmitController
 
 import json
 
@@ -42,6 +43,8 @@ def submit_quest():
 	if password != quest_info['password']:
 		return jsonify({ 'status': 'not success' })
 
+	# add new Submit
+	# UserSubmitController.add_new_submit(current_user, quest_info['quest_id'])
 	next_quest = quest_info['next_quest']
 
 	return jsonify({
