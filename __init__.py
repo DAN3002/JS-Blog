@@ -16,6 +16,10 @@ def create_app():
 
 	app.config["SESSION_PERMANENT"] = False
 	app.config["SESSION_TYPE"] = "filesystem"
+
+	app.config['UPLOAD_FOLDER'] = 'static/img/user_upload'
+	app.config['MAX_CONTENT_PATH'] = 50000000
+
 	Session(app)
 
 	db.init_app(app)

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		}).then(async (res) => {
 			const data = await res.json();
 
-			const { status } = data
+			const { status, link } = data
 
 			if (status === 'success') {
 				// Alert swal
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					icon: 'success',
 					button: 'Ok'
 				}).then(() => {
-					// if (next_quest) {
-					// 	window.location.href = `/quest?type=${ next_quest }`;
-					// }
+					if (link) {
+						window.location.href = link;
+					}
 				});
 			}
 			else {

@@ -77,4 +77,4 @@ def check_pass():
 		return jsonify({ 'status': 'not success' })
 
 	session['unlock_blog'] = True;
-	return jsonify({ 'status': 'success' })
+	return jsonify({ 'status': 'success', 'link': url_for('blog.upload_blog') })
