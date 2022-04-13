@@ -73,8 +73,8 @@ def check_pass():
 	
 	# Check if password is correct
 	if password != PASSWORD:
-		session['status'] = 'None';
+		session['unlock_blog'] = False;
 		return jsonify({ 'status': 'not success' })
 
-	session['status'] = 'success';
+	session['unlock_blog'] = True;
 	return jsonify({ 'status': 'success' })

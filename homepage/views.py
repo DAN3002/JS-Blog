@@ -12,8 +12,6 @@ def index():
 	# Get all blog and pass to template
 	blogs = BlogController.get_all_blogs()
 
-	print(session.get("status"))
-
 	return render_template('home.html', blogs=blogs)
 
 @homepage.route('/profile')
