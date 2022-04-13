@@ -33,6 +33,7 @@ def create_app():
 	
 	from .auth.models.User import User
 	from .quest.models.UserSubmit import UserSubmit
+	from .blog.models.Blog import Blog
 
 	db.create_all(app=app)
 
