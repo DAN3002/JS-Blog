@@ -188,8 +188,9 @@ window.onload=function(){
     // --------------------
     
     // Bottom scroll
+    const submitBtn = document.getElementById('submit-btn');
     var interviewMarginBottom = document.getElementById('interview')
-    window.addEventListener('scroll', function() {
+    submitBtn.addEventListener('click', function() {
         if (!activeVirusMode) {
             const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = window.scrollY;
@@ -205,8 +206,30 @@ window.onload=function(){
                 changeHomePage();
                 showFooter ();
             };
-        }
+
+            // Hide challenge section
+            const challengeSection = document.getElementById('challenge');
+            challengeSection.style.display = 'none';
+        } 
     });
+    // window.addEventListener('scroll', function() {
+    //     if (!activeVirusMode) {
+    //         const scrollAble = document.documentElement.scrollHeight - window.innerHeight;
+    //         const scrolled = window.scrollY;
+    //         var virusIsAppear = false;
+            
+    //         if ((Math.ceil(scrolled)) === scrollAble && virusIsAppear == false) {
+    //             activeVirusMode = true;
+    //             virusIsAppear = true;
+                
+    //             window.scrollTo(0, 0);
+    //             virusAppear();
+    //             hideText();
+    //             changeHomePage();
+    //             showFooter ();
+    //         };
+    //     }
+    // });
     // --------------------
     
     // Show Footer Function

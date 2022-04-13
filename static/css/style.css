@@ -28,9 +28,7 @@ html {
     background-color: var(--secondary-background-color) !important;
 }
 
-.title {
-
-}
+.title {}
 
 
 /* Header */
@@ -147,6 +145,7 @@ header #sub-menu-container a {
     from {
         transform: translateX(800px);
     }
+
     to {
         transform: translateX(0);
     }
@@ -156,6 +155,7 @@ header #sub-menu-container a {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(800px);
     }
@@ -252,8 +252,10 @@ header #sub-menu-container a {
     background-color: #fff;
     padding: 10px;
     border: 1px solid #BFBFBF;
-    -ms-transform: rotate(-3deg); /* IE 9 */
-    -webkit-transform: rotate(-3deg); /* Safari */
+    -ms-transform: rotate(-3deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-3deg);
+    /* Safari */
     transform: rotate(-3deg);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
@@ -448,7 +450,7 @@ header #sub-menu-container a {
     font-family: var(--description-font);
     text-align: left;
 }
-  
+
 /*-------------DEPARTMENT-----------------*/
 #department {
     padding-top: 30px;
@@ -461,7 +463,7 @@ header #sub-menu-container a {
     font-family: var(--title-font);
 }
 
-#department .department-title h1{
+#department .department-title h1 {
     font-size: 3.5em;
 }
 
@@ -481,12 +483,14 @@ header #sub-menu-container a {
     margin: 0 auto;
 }
 
-#department .department-row1, .department-row2 {
+#department .department-row1,
+.department-row2 {
     display: flex;
 }
 
-#department .department-row1::after, .department-row2::after {
-    content:"";
+#department .department-row1::after,
+.department-row2::after {
+    content: "";
     display: block;
     clear: both;
 }
@@ -523,6 +527,7 @@ header #sub-menu-container a {
     font-family: var(--title-font);
     z-index: 50;
 }
+
 .col1 {
     display: flex;
     /* width: 33.3333%; */
@@ -546,34 +551,45 @@ header #sub-menu-container a {
     justify-content: center;
     align-items: center;
     height: 100%;
-    
+
 }
-.flex1, .flex3, .flex5 {
+
+.flex1,
+.flex3,
+.flex5 {
     width: 33.33%;
     background-color: var(--primary-background-color);
     color: #fff;
     /* border-radius: 20px;   */
 }
 
-.flex2, .flex4, .flex6 {
+.flex2,
+.flex4,
+.flex6 {
     width: 33.33%;
-    background-color:  var(--secondary-background-color);;
+    background-color: var(--secondary-background-color);
+    ;
     color: #24325b;
     /* border-radius: 20px; */
 }
 
-.flex1, .flex4 {
+.flex1,
+.flex4 {
     order: 2;
 }
-.flex2, .flex5 {
+
+.flex2,
+.flex5 {
     order: 3;
 }
-.flex3, .flex6 {
+
+.flex3,
+.flex6 {
     order: 4;
 }
 
 #department .img-style {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -582,9 +598,7 @@ header #sub-menu-container a {
 
 /*---------------------------------------*/
 
-#jsc {
-    
-}
+#jsc {}
 
 #jsc .jsc-img {
     background: url('/static/img/JscBack.png') top center / cover no-repeat;
@@ -593,9 +607,7 @@ header #sub-menu-container a {
     z-index: -10;
 }
 
-#jsc .jsc-title {
-
-}
+#jsc .jsc-title {}
 
 #jsc .jsc-title .jsc-title-transparent {
     position: absolute;
@@ -656,7 +668,7 @@ header #sub-menu-container a {
     margin-bottom: 60px;
 }
 
-#activities .activity-title{
+#activities .activity-title {
     font-size: 70px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
@@ -679,7 +691,7 @@ header #sub-menu-container a {
 
 }
 
-.image-grid .pictureLayer > img {
+.image-grid .pictureLayer>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -712,18 +724,18 @@ header #sub-menu-container a {
 
 #activities .heading {
     font-family: var(--title-font);
-	font-weight: bold;	
+    font-weight: bold;
     font-size: 45px;
     text-align: center;
     margin: 3%;
     z-index: 10;
-    
-    
+
+
 }
 
 #activities .content {
     font-family: var(--description-font);
-	font-weight: 300;
+    font-weight: 300;
     font-size: 25px;
     text-align: center;
     margin: 3%;
@@ -735,7 +747,7 @@ header #sub-menu-container a {
 /* animation */
 
 .from-left {
--webkit-animation: from-left 1.2s ease-in-out;
+    -webkit-animation: from-left 1.2s ease-in-out;
 }
 
 @-webkit-keyframes from-left {
@@ -743,6 +755,7 @@ header #sub-menu-container a {
         opacity: 0;
         -webkit-transform: translateX(-70px);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: translateX(0px);
@@ -751,33 +764,36 @@ header #sub-menu-container a {
 
 .from-right {
     -webkit-animation: from-right 1.2s ease-in-out;
-    }
-    
-    @-webkit-keyframes from-right {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateX(70px);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateX(0px);
-        }
+}
+
+@-webkit-keyframes from-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70px);
     }
 
-    .from-top {
-        -webkit-animation: from-top 1.2s ease-in-out;
-        }
-        
-        @-webkit-keyframes from-top {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translateY(0px);
-            }
-        }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+
+.from-top {
+    -webkit-animation: from-top 1.2s ease-in-out;
+}
+
+@-webkit-keyframes from-top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+}
+
 /* interview */
 
 
@@ -817,7 +833,7 @@ header #sub-menu-container a {
 
 #interview .interview-container .interview-back {
     height: 100%;
-    width:   100%;
+    width: 100%;
     z-index: -6;
 }
 
@@ -856,9 +872,7 @@ header #sub-menu-container a {
     z-index: 7;
 }
 
-#interview .interview-container .hoverLayer:hover {
-
-}
+#interview .interview-container .hoverLayer:hover {}
 
 #interview .interview-container .interview-overlay {
     /* display: none; */
@@ -890,13 +904,11 @@ header #sub-menu-container a {
     background-color: var(--primary-background-color);
 }
 
-#quiz {
-
-}
+#quiz {}
 
 
 footer {
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 #virus .bug {
@@ -980,8 +992,10 @@ footer .footer_bug_img {
 footer .footer_bug_img img {
     height: 100%;
     width: 25%;
-    -ms-transform: rotate(-45deg); /* IE 9 */
-    -webkit-transform: rotate(-45deg); /* Safari */
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Safari */
     transform: rotate(-45deg);
 }
 
@@ -990,6 +1004,7 @@ footer .footer_bug_img img {
         transform: translateY(100px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1001,6 +1016,7 @@ footer .footer_bug_img img {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -1012,8 +1028,34 @@ footer .footer_bug_img img {
         transform: translateX(100px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+
+#challenge h2 {
+    color: black;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+#challenge p {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+
+.wrap-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background: url(/static/img/banner/background.png);
+    background-size: cover;
+    background-position: center;
+    max-height: 300px;
 }
