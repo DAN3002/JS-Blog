@@ -132,5 +132,5 @@ dmypy.json
 /js-blog/*
 .vercel
 
-# Database
-./js-blog-db.sqlite
+# Flask Sesion
+/flask_session/*

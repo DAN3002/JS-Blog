@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, session
 from flask_login import login_required, current_user
 from flask import jsonify 
 from .models.UserSubmit import UserSubmitController
@@ -73,6 +73,8 @@ def check_pass():
 	
 	# Check if password is correct
 	if password != PASSWORD:
+		session['status'] = 'None';
 		return jsonify({ 'status': 'not success' })
 
+	session['status'] = 'success';
 	return jsonify({ 'status': 'success' })

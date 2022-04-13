@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, session
 from flask import render_template
 from flask_login import login_required, current_user
 
@@ -11,6 +11,8 @@ homepage = Blueprint('homepage', __name__)
 def index():
 	# Get all blog and pass to template
 	blogs = BlogController.get_all_blogs()
+
+	print(session.get("status"))
 
 	return render_template('home.html', blogs=blogs)
 
