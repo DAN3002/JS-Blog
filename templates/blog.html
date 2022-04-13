@@ -10,8 +10,10 @@
 <body>
 	<div class="sample-header">
 		<div class="sample-header-section">
-			<h1>Cấn Nguyễn Bảo Châu</h1>
-			<h2>Trưởng ban Truyền thông Gen 9 JS Club</h2>
+			<!-- Assign Blog owner from blog data in template flask-->
+			<h1>{{ blog.owner }}</h1>
+			<!-- Assign Blog title from blog data in template flask-->
+			<h2>{{ blog.role }}</h2>
 		</div>
 	</div>
 	<div class="sample-section-wrap">
