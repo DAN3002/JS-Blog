@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+from flask_migrate import Migrate
 
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
@@ -13,6 +14,7 @@ def create_app():
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///js-blog-db.sqlite'
 
 	db.init_app(app)
+	migrate = Migrate(app, db)
 
 	# Config Login
 	login_manager = LoginManager()

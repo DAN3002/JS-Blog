@@ -5,6 +5,7 @@ class Blog(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	content = db.Column(db.String)
 	owner = db.Column(db.String)
+	subtitle = db.Column(db.String)
 	role = db.Column(db.String)
 
 class BlogController():
