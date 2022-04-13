@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<title>Upload Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+</head>
+
+<body>
+	<div class="sample-section-wrap">
+		<div class="sample-section">
+			<div class="container-contact100">
+				<div class="wrap-contact100">
+					<form class="contact100-form validate-form">
+						<span class="contact100-form-title">
+							Write Story
+						</span>
+						<div class="wrap-input100 validate-input">
+							<input class="input100" id="name" type="text" name="name" placeholder="Your name ..." required>
+							<label class="label-input100" for="name">
+								<span class="lnr lnr-user"></span>
+							</label>
+						</div>
+						<div class="wrap-input100 validate-input">
+							<input class="input100" id="role" type="text" name="role" placeholder="Your role in JSC ..." required>
+							<label class="label-input100" for="role">
+								<span class="lnr lnr-database"></span>
+							</label>
+						</div>
+						<div class="wrap-input100 validate-input">
+							<input class="input100" id="image" type="file" name="image" placeholder="Your Image" required style="padding-top: 20px;" accept="image/png, image/gif, image/jpeg">
+							<label class="label-input100" for="image">
+								<span class="lnr lnr-upload"></span>
+							</label>
+						</div>
+						<div class="wrap-input100 validate-input">
+							<input class="input100" id="subtitle" type="text" name="subtitle" placeholder="Write some subtitle ...">
+							<label class="label-input100" for="subtitle">
+								<span class="lnr lnr-book"></span>
+							</label>
+						</div>
+						<div class="wrap-input100 validate-input">
+							<textarea class="input100" name="fullContent" placeholder="Full Content"
+								id="fullContent"></textarea>
+						</div>
+						<button type="submit" class="btn btn-success btn-lg">Upload Story</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+	<script src="/static/scripts/submit_story.js"></script>
+</body>
+
+</html>

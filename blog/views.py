@@ -13,4 +13,6 @@ def view_blog():
 	blog = BlogController.get_blog_by_id(id)
 	return render_template('blog.html', blog=blog)
 
-
+@blog.route('/upload')
+def upload_blog():
+	return render_template('upload.html')
