@@ -327,28 +327,6 @@ window.onload=function(){
     // --------------------
 
     // Check Password Function
-    password();
-    function password() {
-        var passwordBtn = document.getElementById('check_password_button');
-        passwordBtn.addEventListener('click', checkPassword);
-        
-        function checkPassword () {
-            var password = document.getElementById('password').value;
-            var passwordResult = document.getElementById('password_result');
-            var correctPassword = 'Bình';
-    
-            if (password == correctPassword) {
-                passwordResult.innerHTML = 'Correct Password';
-                passwordResult.style.color = 'green';
-                bugs.style.display = 'none';
-            } else {
-                passwordResult.innerHTML = 'Incorrect Password';
-                passwordResult.style.color = 'red';
-                addVirus();
-    
-            }
-        }
-    };
     // --------------------
 
     // Add Virus Function

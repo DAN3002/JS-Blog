@@ -9,6 +9,8 @@ from .enum import get_quest_info, get_quest_by_number
 
 quest = Blueprint('quest', __name__)
 
+PASSWORD = 'Bình'
+
 @quest.route('/', methods = ['GET'])
 @login_required
 def index():
@@ -60,3 +62,17 @@ def submit_quest():
 		'status': 'success',
 		'next_quest': next_quest
 	})
+
+@quest.route('/check_pass', methods = ['POST'])
+def check_pass():
+	# Get password, type from request body
+	request_data = request.data
+	request_data = json.loads(request_data)
+
+	password = request_data['quest_password']
+	
+	# Check if password is correct
+	if password != PASSWORD:
+		return jsonify({ 'status': 'not success' })
+
+	return jsonify({ 'status': 'success' })
