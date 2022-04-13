@@ -339,78 +339,29 @@
             <h1 style="color:rgb(36, 50, 91)">Interview</h1>
         </div>
         <ul class="cards">
-            <li>
-                <a href="" class="card">
-                    <img src="/static/img/interview/interview1.jpg" class="card__image" alt="" />
-                    <div class="card__overlay">
-                        <div class="card__header">
-                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                <path /></svg>
-                            <div class="card__header-text">
-                                <h3 class="card__title">Cấn Nguyễn Bảo Châu</h3>
-                                <span class="card__status">Trưởng ban Truyền thông Gen 9 JS Club</span>
-                                <span class="card__tagline">K16 - Ngành Thiết kế Mỹ thuật số</span>
-                            </div>
-                        </div>
-                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                            blanditiis?</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="" class="card">
-                    <img src="/static/img/interview/interview2.jpg" class="card__image" alt="" />
-                    <div class="card__overlay">
-                        <div class="card__header">
-                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                <path /></svg>
-                            <div class="card__header-text">
-                                <h3 class="card__title">Lê Thanh Bình</h3>
-                                <span class="card__status">Chủ tịch JSC gen 9</span>
-                                <span class="card__tagline">K16 - Ngành CNTT</span>
-                            </div>
-                        </div>
-                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                            blanditiis?</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="" class="card">
-                    <img src="/static/img/interview/interview3.jpg" class="card__image" alt="" />
-                    <div class="card__overlay">
-                        <div class="card__header">
-                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                <path /></svg>
-                            <div class="card__header-text">
-                                <h3 class="card__title">Nguyễn Trung Hiếu</h3>
-                                <span class="card__status">Thành viên BCM</span>
-                                <span class="card__tagline">Kỹ thuật phần mềm</span>
-                            </div>
-                        </div>
-                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                            blanditiis?</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="" class="card">
-                    <img src="/static/img/interview/interview4.jpg" class="card__image" alt="" />
-                    <div class="card__overlay">
-                        <div class="card__header">
-                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                <path /></svg>
-                            <div class="card__header-text">
-                                <h3 class="card__title"> Phạm Trường Giang</h3>
-                                <span class="card__status">Phó chủ nhiệm Gen 8</span>
-                                <span class="card__tagline">K14, ngành Kỹ thuật phần mềm</span>
-                            </div>
-                        </div>
-                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                            blanditiis?</p>
-                    </div>
-                </a>
-            </li>
+			<!-- For each blog in blogs from template and render li item in flask-->
+			{% for blog in blogs %}
+				<li>
+					<a href="/blog/view?id={{ blog.id }}" class="card" target="_blank">
+						<img src="{{ blog.image }}" class="card__image" alt="" />
+						<div class="card__overlay">
+							<div class="card__header">
+								<svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+									<path /></svg>
+								<div class="card__header-text">
+									<h3 class="card__title">{{ blog.owner }}</h3>
+									<span class="card__status">{{ blog.role }}</span>
+								</div>
+							</div>
+							<p class="card__description">
+								{% if blog.subtitle is not none %}
+									<h3>{{ blog.subtitle }}</h3>
+								{% endif %}
+							</p>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
         </ul>
     </div>
     <div id="quiz">

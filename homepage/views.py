@@ -2,11 +2,17 @@ from flask import Blueprint
 from flask import render_template
 from flask_login import login_required, current_user
 
+# Import BlogController
+from ..blog.models.Blog import BlogController
+
 homepage = Blueprint('homepage', __name__)
 
 @homepage.route('/')
-def index():	
-	return render_template('home.html')
+def index():
+	# Get all blog and pass to template
+	blogs = BlogController.get_all_blogs()
+
+	return render_template('home.html', blogs=blogs)
 
 @homepage.route('/profile')
 @login_required

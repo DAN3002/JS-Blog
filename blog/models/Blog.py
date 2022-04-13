@@ -1,4 +1,5 @@
 from datetime import datetime
+from email.mime import image
 from ... import db
 
 class Blog(db.Model):
@@ -7,6 +8,8 @@ class Blog(db.Model):
 	owner = db.Column(db.String)
 	subtitle = db.Column(db.String)
 	role = db.Column(db.String)
+	date = db.Column(db.DateTime)
+	image = db.Column(db.String)
 
 class BlogController():
 	@staticmethod
