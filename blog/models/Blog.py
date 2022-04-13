@@ -33,8 +33,7 @@ class BlogController():
 		return Blog.query.filter_by(date=date).all()
 
 	@staticmethod
-	def create_blog(content, owner, role):
-		blog = Blog(content=content, owner=owner, role=role, date=datetime.now())
-		db.session.add(blog)
+	def create_blog(content, owner, subtitle, role, image):
+		new_blog = Blog(content=content, owner=owner, subtitle=subtitle, role=role, date=datetime.now(), image=image)
+		db.session.add(new_blog)
 		db.session.commit()
-		return blog

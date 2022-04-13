@@ -6,8 +6,6 @@ import os
 
 blog = Blueprint('blog', __name__)
 
-import json
-
 @blog.route('/view')
 def view_blog():
 	id = request.args.get('id', None)
@@ -36,22 +34,18 @@ def upload_blog_post():
 	filename = uuid.uuid1().hex + secure_filename(f.filename)
 	path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-	print(path)
-
 	f.save(path)
 
 	# Get data from request body
-	# request_data = request.data
-	# request_data = json.loads(request_data)
 
-	# name = request_data['name']
-	# role = request_data['role']
-	# subtitle = request_data['subtitle']
-	# fullContent = request_data['fullContent']
+	name = request.form['name']
+	role = request.form['role']
+	subtitle = request.form['subtitle']
+	fullContent = request.form['fullContent']
 
 
 	# Add new blog
-	# BlogController.add_new_blog(title, content)
+	BlogController.create_blog(fullContent, name, subtitle, role, path)
 
 	return jsonify({
 		'status': 'success'
