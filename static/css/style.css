@@ -1055,7 +1055,6 @@ footer .footer_bug_img img {
     justify-content: center;
     align-items: center;
     height: 75vh;
-    background: url(/static/img/banner/background.png);
     background-size: cover;
     background-position: center;
     max-height: 300px;
