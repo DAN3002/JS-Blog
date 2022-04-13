@@ -1,10 +1,461 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="stylesheet" href="/static/fonts/font-awesome/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/static/fonts/font-awesome/all.js"></script>
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" href="/static/css/card.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div id="menu-btn">
+                <i class="fa-solid fa-bars menu-symbol"></i>
+            </div>
+        </div>
+        <div id="sub-menu" class="">
+            <div id="sub-menu-container">
+                <ul class="menu-list">
+                    <li class="sub-menu-header">
+                        <img src="/static/img/logo-long.png" alt="" class="sub-menu-logo">
+                        <i class="fa-solid fa-xmark sub-menu-closebtn" id="close-menu-btn"></i>
+                    </li>
+                    <li class="sub-menu-child"><a href="#"><i class="sub-menu-icon fa-solid fa-house"></i></i> Home</a></li>
+                    <li class="sub-menu-child"><a href="#history"><i class="sub-menu-icon fa-solid fa-clock-rotate-left"></i> History</a></li>
+                    <li class="sub-menu-child"><a href="#department"><i class="sub-menu-icon fa-solid fa-people-group"></i> Department</a></li>
+                    <li class="sub-menu-child"><a href="#jsc"><i class="sub-menu-icon fa-solid fa-mountain-sun"></i> JSC</a></li>
+                    <li class="sub-menu-child"><a href="#activities"><i class="sub-menu-icon fa-solid fa-code"></i> Activities</a></li>
+                    <li class="sub-menu-child"><a href="#interview"><i class="sub-menu-icon fa-solid fa-headset"></i> Interview</a></li>
+                    <li class="sub-menu-child"><a href="#quiz"><i class="sub-menu-icon fa-solid fa-question"></i> Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div id="home">
+        <div class="home-bg">
+            <img src="/static/img/banner/background.png" id="home_background" alt="">
+            <img src="/static/img/banner/stars.png" id="stars" alt="">
+            <img src="/static/img/banner/sun.png" id="sun" alt="">
+            <img src="/static/img/banner/light.png" id="light" alt="">
+            <img src="/static/img/banner/cloud.png" id="cloud" alt="">
+            <img src="/static/img/banner/landscape/left-far-rock.png" id="left_far_rock" alt="">
+            <img src="/static/img/banner/landscape/right-far-rock.png" id="right_far_rock" alt="">
+            <img src="/static/img/banner/lake.png" id="lake" alt="">
+            <img src="/static/img/banner/landscape/left-near-rock.png" id="left_near_rock" alt="">
+            <img src="/static/img/banner/landscape/right-near-rock.png" id="right_near_rock" alt="">
+            <img src="/static/img/banner/gate.png" id="gate" alt="">
+            <div id="night_overlay"></div>
+            <div id="virus_overlay"></div>
+            <img src="/static/img/banner/logo-long.png" id="logo_long" alt="">
+        </div>
+        <div class="home-sec" id="home-sec">
+            <div class="home-sec-container">
+                <div class="home-sec-text">
+                    <h2 class="home-sec-title">About JS Club</h2>
+                    <p class="home-sec-desc">JS Club là tên viết tắt của Japanese Software Engineers Club – Câu lạc bộ Kỹ sư phần mềm Nhật Bản được thành lập vào tháng 02/2014. 
+                        Từ những ngày đầu thành lập, JS mang sứ mạng trở thành một cộng đồng kết nối các sinh viên theo chuyên ngành hẹp JS nói riêng và toàn thể các bạn sinh viên nói chung.</p>
+                </div>
+                <div class="jsc_img">
+                    <img src="/static/img/jsc_img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="history">
+        <div class="history-container">
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slider-main">
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide1.png" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 1</h3>
+                                <p>Lê Minh Tài</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide2.png" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 2</h3>
+                                <p>Lê Đình Huynh</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide3.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 3</h3>
+                                <p>Luyện Bảo Anh</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide4.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 4</h3>
+                                <p>Phùng Khắc Thành</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide5.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 5</h3>
+                                <p>Phạm Oanh</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide6.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 6</h3>
+                                <p>Từ Khắc Hiếu</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide7.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 7</h3>
+                                <p>Nguyễn Minh Hiếu</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide8.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 8</h3>
+                                <p>Khuất Mạnh Hoàng</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="/static/img/slider/slide9.jpg" alt="">
+                            <div class="desc">
+                                <h3>Chủ Nhiệm Gen 9</h3>
+                                <p>Lê Thanh Bình</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-button-container">
+                    <button class="slider-btn prevBtn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="slider-btn nextBtn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <ul class="slider-dots">
+                    <li class="slider-dot-item active" data-index="1"></li>
+                    <li class="slider-dot-item" data-index="2"></li>
+                    <li class="slider-dot-item" data-index="3"></li>
+                    <li class="slider-dot-item" data-index="4"></li>
+                    <li class="slider-dot-item" data-index="5"></li>
+                    <li class="slider-dot-item" data-index="6"></li>
+                    <li class="slider-dot-item" data-index="7"></li>
+                    <li class="slider-dot-item" data-index="8"></li>
+                    <li class="slider-dot-item" data-index="9"></li>
+                </ul>
+            </div>
+            <div class="history-content">
+                <h1>History</h1>
+                <p>Từ khi thành lập vào năm 2014 đến nay, CLB đã đi qua 9 nhiệm kì - mỗi nhiệm kì là một bước trưởng thành và phát triển. Các đời chủ nhiệm của JS đều là những con người đấy trách nhiệm và nhiệt huyết. Cùng với các thành viên khác trong ban chủ nhiệm, họ sẵn sàng cống hiến thời gian và tài năng của mình để chèo lái CLB, góp phần không nhỏ vào những chiến tích lớn, nổi bật nhất phải kể đến danh hiệu CLB xuất sắc 10 kì liên tiếp.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="department">
+        <div class="department-desc">
+            <h1 class="department-title">Departments</h1>
+        </div>
 
-{% block content %}
-	<h1 class="title">
-		This is HomePage
-	</h1>
-	<h2 class="subtitle">
-		Team 2
-	</h2>
-{% endblock %}
+        <div class="department-img-list">
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex2">
+                        <ul>
+                            <li><h1 class="header">BRAINSTORM</h1></li>
+                            <li><h2 class="header">Ban nội dung</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex3">
+                        <ul>
+                            <!-- <li>Dựa trên mô hình Agile - một phương pháp phát triển phần mềm, bước đầu tiên cần làm là Brainstorm. Công việc này đòi hỏi tư duy ý tưởng sáng tạo nhưng cũng phải thật chu đáo, cẩn thận. Không ai khác, Ban Nội dung là những “thủ lĩnh” trong công việc này.</li> -->
+                            <li class="content">Ban Nội dung chính là một phần cấu tạo nên JS với nhiệm vụ lên nội dung, lên ý tưởng, concept cho các sự kiện. Làm việc ở ban Nội dung, bạn còn cần có một tinh thần vô cùng trách nhiệm, kỹ năng làm việc nhóm vì họ thường xuyên phải phối hợp với các phân ban khác để làm nên một chương trình thành công.</li>
+                        </ul>
+                    </div>
+                    <div class="flex1">
+                        <img class="img-style" src="/static/img/department/Ban nội dung.png" alt="Ban nội dung">
+                    </div>
+                </div>
+            </div>
+            <div class="department-row2">
+                <div class="department-column">
+                    <div class="col2 flex4">
+                        <ul>
+                            <li class="content" style="color: rgb(36, 50, 91);">Những người được cho là “đầu não”, là những người trực tiếp giám sát và triển khai những thông tin mang tính học thuật cao không ai khác chính là ban Chuyên môn của JS.</li>
+                            <li class="content" style="color: rgb(36, 50, 91);">Mang trong mình trọng trách giữ gìn giá trị “cốt lõi” của một CLB học thuật, người ban Chuyên môn luôn luôn sáng tạo và đổi mới qua các buổi techtalk, các lớp training hay thậm chí cả những cuộc thi học thuật nữa.</li>
+                        </ul>
+                    </div>
+                    <div class="col1 flex6">
+                        <ul>
+                            <li><h1 class="header">DEPLOYMENT</h1></li>
+                            <li><h2 class="header">Ban chuyên môn</h2></li>
+                        </ul>
+                    </div>
+                    <div class="flex5">
+                        <img class="img-style" src="/static/img/department/Ban chuyên môn.jpg" alt="Ban chuyên môn">
+                    </div>
+                </div>
+            </div>
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex1">
+                        <ul>
+                            <li><h1 class="header">DEVELOPMENT</h1></li>
+                            <li><h2 class="header">Ban văn hóa</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex2">
+                        <ul>
+                            <li class="content" style="color: rgb(36, 50, 91);">Một trong những nhân tố góp phần vô cùng to lớn trong quá trình hình thành và phát triển nên JS đó chính là ban Văn hóa. Vì vậy, chẳng phải tự nhiên mà Văn hóa được mệnh danh là “linh hồn” của JS.</li>
+                            <li class="content" style="color: rgb(36, 50, 91);">Không có cuộc vui nào mà vắng mặt các thành viên phân ban này. Đặc biệt, họ còn là người rất đa tài, đủ các yếu tố cầm - kỳ - thi - họa, hứa hẹn sẽ tiếp lửa và mang đến sự tích cực cho các JSers.</li>
+                            <!-- <li>Nếu bạn nghĩ rằng: “Vào Văn hóa chỉ ăn chơi thôi chứ có làm gì đâu” thì không hề, chúng mình còn học hỏi được rất nhiều điều bổ ích đó! Bật mí nhỏ với bạn, danh hiệu “Cóc vàng” của JS cũng có sự góp mặt đáng kể của người Văn hóa đó nha.</li> -->
+                            
+                        </ul>
+                    </div>
+                    <div class="flex3">
+                        <img class="img-style" src="/static/img/department/Ban văn hóa.jpg" alt="Ban văn hóa">
+                    </div>
+                </div>
+            </div>
+            <div class="department-row2">
+                <div class="department-column">
+                    <div class="col2 flex4">
+                        <ul>
+                            <li class="content" style="color: rgb(36, 50, 91);">Nắm giữ vai trò tạo nên “giao diện” và hình ảnh chính, ban Truyền thông đang ngày càng khẳng định được tầm quan trọng của mình ở JS.</li>
+                            <li class="content" style="color: rgb(36, 50, 91);">Vì đặc thù đòi hỏi sự sáng tạo, các thành viên ở ban Truyền thông luôn không ngừng tìm tòi và “liều lĩnh” thử sức với các concept khác nhau.</li>
+                            <!-- <li>Đặc biệt, ban Truyền thông còn có sự góp mặt của rất nhiều các bạn học chuyên ngành khác Công nghệ thông tin - điều làm nên sự đa dạng và chất riêng của ban Truyền thông JS.</li> -->
+                        </ul>   
+                    </div>
+                    <div class="col1 flex6">
+                        <ul>
+                            <li><h1 class="header">PICTURE PRODUCTION</h1></li>
+                            <li><h2 class="header">Ban Truyền thông</h2></li>
+                        </ul>
+                    </div>
+                    <div class="flex5">
+                        <img class="img-style" src="/static/img/department/Ban truyền thông.jpg" alt="Ban truyền thông">
+                    </div>
+                </div>
+            </div>
+            <div class="department-row1">
+                <div class="department-column">
+                    <div class="col1 flex2">
+                        <ul>
+                            <li><h1 class="header">QUALITY ASSURANCE</h1></li>
+                            <li><h2 class="header">Ban Đối ngoại</h2></li>
+                        </ul>
+                    </div>
+                    <div class="col2 flex3">
+                        <ul>
+                            <!-- <li>Để đảm bảo được chất lượng các sản phẩm cũng như mối quan hệ của JS, chúng ta phải kể đến công sức vô cùng to lớn của các thành viên ban Đối ngoại.</li> -->
+                            <li class="content">“Khéo léo”, “nhanh nhạy” và “hoạt bát” là những tính từ khi nhắc đến con người của Đối ngoại. Nếu ban Văn hóa là sợi dây gắn kết thành viên trong JS thì Đối ngoại chính là cầu nối JS với các CLB cũng như tổ chức trong và ngoài phạm vi FPT. Chính vì vậy, đây cũng là phân ban hội tụ rất nhiều những gương mặt sáng giá với visual cực đỉnh của JS.</li>
+                        </ul>
+                    </div>
+                    <div class="flex1">
+                        <img class="img-style" src="/static/img/department/Ban đối ngoại.jpg" alt="Ban đối ngoại">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div id="jsc">
+        <div class="jsc-img">
+            <div class="jsc-title">
+                <h1 class="jsc-title-transparent">Nhật Bản Trong JSC</h1>
+            </div>
+    
+            <div class="jsc-desc desc1">
+                <p class="virus_hideText_list">Ngay từ cái tên Japanese Software Engineers Club, JS đã thể hiện rằng Nhật Bản là một phần không thể thiếu và làm nên câu lạc bộ.
+                    <br>Về học thuật, JS Club thường xuyên tổ chức các lớp training Nhật - nơi sẽ chỉ cho các bạn về ngữ pháp cũng như văn hóa bởi các mentors đầy kinh nghiệm.
+                    <br>Còn ở các sự kiện văn hóa, concept liên quan tới đất nước “mặt trời mọc” này cũng thường xuyên được lựa chọn. Một ví dụ điển hình là tại International Day, JS Club mang trên mình màu sắc Nhật Bản với tone màu đỏ, trắng; sự trang trí đẹp mắt của cổng Torii hay những bộ đồ kimono truyền thống.
+                    <br>Ngoài ra, câu lạc bộ cũng thường xuyên tạo được hình ảnh đẹp trong mắt các công ty hợp tác Nhật Bản nên chúng mình được nói chuyện, trao đổi với họ về những cơ hội việc làm tại Nhật.
+                </p>
+            </div>
+            <div class="jsc-desc desc2">
+                <p class="virus_hideText_list">Không chỉ các hoạt động offline, page Facebook chính thức của câu lạc bộ cũng có những bản tin vắn các sự kiện hay các bài giới thiệu về văn hóa Nhật vô cùng thú vị. JS Club cũng tổng hợp và dịch các bài báo trong ngày để thông tin được truyền tải mang tính hợp thời nhất.
+                    <br>Cuối cùng, đặc biệt hơn cả, điều làm nên sự khác biệt giữa JS Club và các câu lạc bộ có liên quan đến Nhật Bản đó là cách áp dụng lối sống người Nhật vào hoạt động thường ngày. Văn hóa đúng giờ, phong thái làm việc nghiêm túc, tỉ mỉ, cẩn thận đều được truyền từ thế hệ này sang thế hệ khác của JS Club.
+                    <br>Tóm lại, mối quan hệ giữa Nhật Bản và JS Club vô cùng chặt chẽ và không thể tách rời. Hy vọng rằng câu lạc bộ JS sẽ giữ mãi được bản sắc của mình mãi về sau.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="activities">
+        <div class="activities-container">
+            <h1 class="activity-title from-top">Activities</h1>
+            <div class="image-grid">
+                <div class="pictureLayer from-left">
+                    <img class="image__img" src="/static/img/activities/jsc.jpg" alt="">
+                    <div class="transparent-block">
+                        <h1 class="heading">Sự kiện học thuật</h1>
+                        <p class="content">Là cái nôi đào tạo, rèn luyện và học tập của những con người JSC và còn là event chính của câu lạc bộ, sự kiện học thuật tựa như sân chơi lành mạnh, phục vụ cho mục đích thi đua và học hỏi đanh cho mọi thành viên.</p>
+                    </div>
+                </div>
+
+                <div class="pictureLayer from-right">
+                    <img class="image__img" src="/static/img/activities/algo.jpg" alt="">
+                    <div class="transparent-block">
+                        <h1 class="heading">Training</h1>
+                        <p class="content">JS Club hướng đến mục tiêu trau dồi khả năng sử dụng Ngôn ngữ Nhật và cải thiện tư duy cũng như kĩ năng lập trình cho các thành viên, do đó, các buổi training Nihongo và training lập trình là các sự kiện không thể thiếu ở JS.</p>
+                    </div>
+                </div>
+
+                <div class="pictureLayer from-left">
+                    <img class="image__img" src="/static/img/activities/training.jpg" alt="">
+                    <div class="transparent-block">
+                        <h1 class="heading">Technical Sharing</h1>
+                        <p class="content">Với tinh thần "anh em cây khế", các tiền bối thường tổ chức các buổi chia sẻ kiến thức hay ho và thiết thực (thí dụ: Frontend, Git, API,...) để hỗ trợ các cháu nhỏ chân ướt chân ráo.</p>
+                    </div>
+                </div>
+
+                <div class="pictureLayer from-right">
+                    <img class="image__img" src="/static/img/activities/vanhoa.jpg" alt="">
+                    <div class="transparent-block">
+                        <h1 class="heading">Văn hóa</h1>
+                        <p class="content">Một trong những hoạt động đưa mọi người tới gần nhau hơn chính là những sự kiện văn hóa, nổi bật nhất là những chuyến teambuilding đến các địa điểm Northside nổi tiếng như Mai Châu, Sapa, Ba Vì,...</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <div id="interview">
+        <div class="interview-title">
+            <h1 style="color:rgb(36, 50, 91)">Interview</h1>
+        </div>
+        <ul class="cards">
+            <li>
+                <a href="" class="card">
+                    <img src="/static/img/interview/interview1.jpg" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path /></svg>
+                            <div class="card__header-text">
+                                <h3 class="card__title">Cấn Nguyễn Bảo Châu</h3>
+                                <span class="card__status">Trưởng ban Truyền thông Gen 9 JS Club</span>
+                                <span class="card__tagline">K16 - Ngành Thiết kế Mỹ thuật số</span>
+                            </div>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                            blanditiis?</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="card">
+                    <img src="/static/img/interview/interview2.jpg" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path /></svg>
+                            <div class="card__header-text">
+                                <h3 class="card__title">Lê Thanh Bình</h3>
+                                <span class="card__status">Chủ tịch JSC gen 9</span>
+                                <span class="card__tagline">K16 - Ngành CNTT</span>
+                            </div>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                            blanditiis?</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="card">
+                    <img src="/static/img/interview/interview3.jpg" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path /></svg>
+                            <div class="card__header-text">
+                                <h3 class="card__title">Nguyễn Trung Hiếu</h3>
+                                <span class="card__status">Thành viên BCM</span>
+                                <span class="card__tagline">Kỹ thuật phần mềm</span>
+                            </div>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                            blanditiis?</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="card">
+                    <img src="/static/img/interview/interview4.jpg" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path /></svg>
+                            <div class="card__header-text">
+                                <h3 class="card__title"> Phạm Trường Giang</h3>
+                                <span class="card__status">Phó chủ nhiệm Gen 8</span>
+                                <span class="card__tagline">K14, ngành Kỹ thuật phần mềm</span>
+                            </div>
+                        </div>
+                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                            blanditiis?</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="quiz">
+
+    </div>
+
+    
+    <div id="virus">
+        <div id="bugs">
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+            <div class="bug">
+                <img src="/static/img/bug.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer_text">
+            <h3>Gợi ý:</h3>
+            <p>Lên quan xuống dân</p>
+        </div>
+        <div class="footer_password">
+            <h2>PASSWORD</h2>
+            <div class="password_input">
+                <input id="password" type="text">
+                <button id="check_password_button" type="button">OK</button>
+            </div>
+            <p id="password_result"></p>
+        </div>
+        <div class="footer_bug_img">
+            <img src="/static/img/bug.png" alt="">
+        </div>
+    </footer>
+</body>
+</html>
