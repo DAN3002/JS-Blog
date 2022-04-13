@@ -18,7 +18,12 @@ $(document).ready(function (e) {
             fd.append("fullContent", body.fullContent);
 
 
-            console.log(fd);
+            // Clear Inputs
+            $("#name").val("");
+            $("#role").val("");
+            $("#subtitle").val("");
+            $("#image").val("");
+            fullContentArea.value("");
 
             $.ajax({
                 type: "POST",
@@ -27,16 +32,22 @@ $(document).ready(function (e) {
                 processData: false,
                 contentType: false,
                 success: function (data) {
-                    console.log(data);
+                    // Alert using Swal
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Your story has been uploaded!",
+                        icon: "success",
+                    }).then(() => {
+                        window.location.href = "/";
+                    });
                 },
                 error: function (err) {
-                    console.log(err);
+                    Swal.fire({
+                        title: "Error!",
+                        text: "Something went wrong!",
+                        icon: "error",
+                    });
                 }
             });
-
-            // $.post("/blog/upload", body, res => {
-            //     console.log(res);
-            //     // window.location.href = "/PRJ321x_ASM4/admin/page";
-            // });
     });
 });
