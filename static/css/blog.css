@@ -11,7 +11,7 @@ body {
 	left: 0;
 	top: 0;
 	width: 100%;
-	background-image: url("/assets/img/sample-bg.jpg");
+	background-image: url("/static/img/sample-bg.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

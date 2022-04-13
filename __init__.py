@@ -23,11 +23,13 @@ def create_app():
 	from .homepage.views import homepage
 	from .auth.views import auth
 	from .quest.views import quest
+	from .blog.views import blog
 	
 	# Register the blueprint with the application
 	app.register_blueprint(homepage)
 	app.register_blueprint(auth, url_prefix="/auth")
 	app.register_blueprint(quest, url_prefix="/quest")
+	app.register_blueprint(blog, url_prefix="/blog")
 	
 	from .auth.models.User import User
 	from .quest.models.UserSubmit import UserSubmit
